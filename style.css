@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Long+Cang&display=swap');
+
+
+body{
+    background: url(1.png);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Long Cang', cursive;
+}
+
+.menu{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.menu-link{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-link li{
+    list-style: none;
+}
+
+.menu-link li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    color: #90e0ef;
+    text-transform: uppercase;
+    font-size: 5rem;
+   
+}
+
+.menu-link li a:hover{
+    box-shadow: 0 0 10px #80ffdb, 0 0 50px #80ffdb, 0 0 50px #80ffdb;
+    border-radius: 70px;
+}
+
+.menu-link li a::before{
+    line-height: 25vh;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    text-align: center;
+    font-size: 5rem;
+    color: #caf0f8;
+    opacity: 0;
+    transition: 0.5s;
+    font-size: 10rem;
+}
+
+.menu-link li:hover a::before{
+    opacity: 1;
+}
+
